@@ -10,8 +10,7 @@ export class DataBindingComponent implements OnInit {
   url: string = "https://www.linkedin.com/in/romulo-teixeira";
   urlImagem: string = "http://lorempixel.com/400/200/nature/";
   cursoAngular: boolean = true;
-
-
+  showPropertyBinding: boolean = false;
 
   constructor() { }
 
@@ -24,6 +23,11 @@ export class DataBindingComponent implements OnInit {
 
   getConectarPerfil(){
     return true;
+  }
+
+  getChangeShowPropertyBinding(){
+    this.showPropertyBinding = !this.showPropertyBinding;
+    return this.showPropertyBinding;
   }
 
 }

@@ -7,11 +7,28 @@
     <p>Curtindo Angular 6 e melhorando o currículo: {{ cursoAngular && getConectarPerfil() }} </p>
   </article>
   <article>
-    <h3>Property Binding</h3>
-    <p><img src="{{ urlImagem }}"> </p>
-    <p><img [src]="urlImagem"> </p>
-    <p><img bind-src="urlImagem"> </p>
-    <p> </p>
-    <p> </p>
+    <h3 style="cursor: pointer;" (click)="getChangeShowPropertyBinding()">Property Binding - Exibr imagens: {{ showPropertyBinding }}</h3>
+    <p *ngIf="showPropertyBinding"><img src="{{ urlImagem }}"> </p>
+    <p *ngIf="showPropertyBinding"><img bind-src="urlImagem"> </p>
+    <p *ngIf="showPropertyBinding"><img [src]="urlImagem"> </p>
+  </article>
+  <article>
+    <h3>Class e Style binding</h3>
+    <div>
+      Selecione uma classe:
+      <select #classe (change)="0">
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-info">Informação</option>
+        <option value="alert-warning">Alerta</option>
+        <option value="alert-danger">Erro</option>
+      </select>
+      <br /><br />
+      <div class="alert {{ classe.value }}" >Texto colorido conforme valor do box</div>
+      <div class="alert alert-danger" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">Texto exibido conforme valor do box</div>
+      <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">Sucesso</div>
+      <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">Informação</div>
+      <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">Alerta</div>
+      <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">Erro</div>
+    </div>
   </article>
 </section>
