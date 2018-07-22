@@ -1,0 +1,35 @@
+<section class="two-way-binding">
+  <article>
+    <h3 style="cursor: pointer" style="cursor: pointer;" (click)="twoWayDataBinding = !twoWayDataBinding">Two Way Data-Binding</h3>
+    <div *ngIf="twoWayDataBinding">
+      <input type="text" 
+        [value]="nome"
+        (input)="nome = $event.target.value" />
+
+      <!-- <input type="text"  class="form-control" id="alterEgo"
+         [(ngModel)]="model.alterEgo" name="alterEgo"> -->
+
+      <input type="text" id="teste"
+        [ngModel]="nome"
+        (ngModelChange)="nome = $event" />
+      
+      <input type="text" 
+        [(ngModel)]="nome" />
+
+      <input type="text" 
+        bindon-ngModel="nome" />
+        <br />
+        <br />
+        <p>
+          Você digitou: {{ nome }}
+        </p>
+
+      <p>Meu nome é {{ pessoa.nome }} e minha idade é {{ pessoa.idade }} </p>
+      <input type="text" 
+        [(ngModel)]="pessoa.nome" />
+      
+      <input type="text" 
+        [(ngModel)]="pessoa.idade" />
+    </div>
+  </article>
+</section>
