@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeuFormComponent implements OnInit {
   
-  nome: string = "";
+  nome: string = "Oi";
   twoWayDataBinding: boolean = false;
 
   pessoa: any = {
-    nome: "",
-    idade: 0
+    nome: "Nlaskdjflçasdj",
+    idade: 12
   };
 
   constructor() { }
