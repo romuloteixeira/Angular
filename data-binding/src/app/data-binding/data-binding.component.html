@@ -59,3 +59,11 @@
   </article>
 </section>
 <app-meu-form></app-meu-form>
+<section>
+  <article>
+    <h3 style="cursor: pointer;" (click)="showCurso = !showCurso">Curso</h3>
+    <div *ngIf="showCurso">
+      <app-curso [nome]="nomeCurso"></app-curso>
+    </div>
+  </article>
+</section>
