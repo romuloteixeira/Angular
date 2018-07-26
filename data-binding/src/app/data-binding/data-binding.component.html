@@ -64,6 +64,9 @@
     <h3 style="cursor: pointer;" (click)="showCurso = !showCurso">Curso</h3>
     <div *ngIf="showCurso">
       <app-curso [nome]="nomeCurso"></app-curso>
+      <contador [valor]="valorInicial" 
+        (mudouValor)="onMudouValor($event)"
+      ></contador>
     </div>
   </article>
 </section>
