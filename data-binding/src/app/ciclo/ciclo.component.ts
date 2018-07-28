@@ -7,7 +7,8 @@ import {
   AfterContentChecked, 
   AfterViewInit, 
   AfterViewChecked,
-  OnDestroy
+  OnDestroy,
+  Input
 } from '@angular/core';
 
 @Component({
@@ -18,7 +19,7 @@ import {
 export class CicloComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, 
                                         AfterViewInit, AfterViewChecked, OnDestroy {
 
-  valorInicial: number = 10;
+  @Input() valorInicial: number = 10;
   
   constructor() { 
     this.log('Construtor');
