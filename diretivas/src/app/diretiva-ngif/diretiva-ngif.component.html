@@ -20,3 +20,15 @@
   <li>ng test</li>
   <li>ng e2e</li>
 </ul>
+<h5>*ngIf</h5>
+<div *ngIf="cursos.length > 0">
+  Lista de cursos
+</div>
+<div *ngIf="cursos.length == 0">
+  Não existe cursos para serem listados. <br>
+  Usado quando a árvore for grande ou questão de segurança, ex.: Menu que só determinada permissão deve ver.
+</div>
+<div [hidden]="cursos.length != 0">
+  Não existe cursos para serem listados. | Using hidden. <br>
+  Usado quando for pequena árvore, ex.: Mensagem.
+</div>
