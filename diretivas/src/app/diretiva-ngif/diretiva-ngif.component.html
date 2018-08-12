@@ -32,3 +32,18 @@
   Não existe cursos para serem listados. | Using hidden. <br>
   Usado quando for pequena árvore, ex.: Mensagem.
 </div>
+
+<button (click)="onMostrarCursos()">Mostrar ou Esconder Cursos</button>
+
+{{ mostrarCursos }}
+<template [hidden]="!mostrarCursos">
+  <div>Lista de cursos (hidden)</div>
+</template>
+<template *ngIf="mostrarCursos">
+  <div>Lista de cursos template-div</div>
+</template>
+
+<div template="ngIf mostrarCursos">
+  Lista de cursos div.template
+</div>
+
