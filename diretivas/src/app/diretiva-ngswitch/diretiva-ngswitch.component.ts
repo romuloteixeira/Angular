@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StateKey } from '../../../node_modules/@angular/platform-browser';
 
 @Component({
   selector: 'app-diretiva-ngswitch',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class DiretivaNgswitchComponent implements OnInit {
 
   viewMode: string = "mapa";
+  aba: string = "home";
 
   constructor() { }
 
