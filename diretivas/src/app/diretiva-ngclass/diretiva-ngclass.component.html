@@ -1,0 +1,22 @@
+<h3>
+  Diretiva ngClass!
+</h3>
+<h1> 
+  <i
+    class="fa-thumbs-up"
+    [class.far]="!like"
+    [class.fas]="like"
+    (click)="onClickLike()"
+  ></i>
+  &nbsp;&nbsp;
+  <i
+    class="fa-thumbs-down"
+    [ngClass]="{
+      'far': !dislike,
+      'fas': dislike
+    }"
+    (click)="onClickDislike()"
+  ></i>
+</h1>
+<br>
+
